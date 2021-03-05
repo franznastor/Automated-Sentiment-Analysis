@@ -11,7 +11,7 @@ def main():
     crl = pycurl.Curl() 
 
     # Set URL value
-    crl.setopt(crl.URL, 'https://www.wsj.com')
+    crl.setopt(crl.URL, 'https://www.fool.com/')
 
     # Write bytes that are utf-8 encoded
     crl.setopt(crl.WRITEDATA, buf)
@@ -28,10 +28,9 @@ def main():
     # Decode the bytes stored in get_body to HTML and print the result 
     # print('Output of GET request:\n%s' % get_body.decode('utf8')) 
 
-    fname = "/home/neil/bitcoin/scraper/data/wsj.com/" + str(int(time.time())) + ".txt"
+    fname = "/Users/franznastor/QuantProjects/Automated-Sentiment-Analysis/bitcoin scrape/scraper/data/fool.com/" + str(int(time.time())) + ".txt"
     with open(fname, "wb") as outfile:
         outfile.write(body)
 
 if __name__ == "__main__":
     main()
-

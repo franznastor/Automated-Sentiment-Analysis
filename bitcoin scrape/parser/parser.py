@@ -79,17 +79,17 @@ def findWordPairsInFile(fname):
 
 def main():
 
-    files = os.listdir('/home/neil/bitcoin/scraper/data/wsj.com/')
+    files = os.listdir('/Users/franznastor/QuantProjects/Automated-Sentiment-Analysis/bitcoin scrape/scraper/data/fool.com/')
 
     files.sort(reverse=True)
 
-    last_page = FrontPage('/home/neil/bitcoin/scraper/data/wsj.com/' + files[1], int(files[1].split(".")[0]))
-    most_recent_page = FrontPage('/home/neil/bitcoin/scraper/data/wsj.com/' + files[0], int(files[0].split(".")[0]))
+    last_page = FrontPage('/Users/franznastor/QuantProjects/Automated-Sentiment-Analysis/bitcoin scrape/scraper/data/fool.com/' + files[1], int(files[1].split(".")[0]))
+    most_recent_page = FrontPage('/Users/franznastor/QuantProjects/Automated-Sentiment-Analysis/bitcoin scrape/scraper/data/fool.com/' + files[0], int(files[0].split(".")[0]))
 
     print("Loading web page data...")
     front_pages = []
     for fname in tqdm(files[72:len(files)]):
-        front_pages.append(FrontPage('/home/neil/bitcoin/scraper/data/wsj.com/' + fname, int(fname.split(".")[0])))
+        front_pages.append(FrontPage('/Users/franznastor/QuantProjects/Automated-Sentiment-Analysis/bitcoin scrape/scraper/data/fool.com/' + fname, int(fname.split(".")[0])))
 
     print("finished loading headlines...")
 
